@@ -1,0 +1,26 @@
+<template>
+	<lightning-card>
+		<div class="slds-m-around_medium">
+
+			<h1 class="slds-text-heading_large">
+				Componentes filhos
+			</h1>
+			<c-empresa nome="Pamonhas de Piracicapa" cnpj="11122211111" cidade="Ribeirão Preto" ceo="Mestre dos Magos"
+				fundada="1880"></c-empresa><br/>
+			<c-empresa nome="Dm prime fenix" cnpj="558449610001" cidade="São Paulo - SP" ceo="DMM" fundada="2022"></c-empresa>
+			<br/>
+
+			<c-produto nome="Cadeira apex 5000" preco="R$5200,00" descricao="Melhor cadeira gamer" estoque="980 uni">
+			</c-produto><br/>
+			<c-produto nome="Ps5" preco="R$8200,00" descricao="Ps5 Line" estoque="250 uni"></c-produto>
+
+
+			<template for:each={data} for:item="produto">
+				<c-produto key={produto.cod} nome={produto.nome} preco={produto.preco} estoque={produto.estoque}></c-produto>
+
+
+			</template>
+		</div>
+
+	</lightning-card>
+</template>
